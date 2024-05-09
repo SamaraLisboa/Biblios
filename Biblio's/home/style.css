@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Inter:wght@100..900&family=Itim&display=swap');
+
 :root {
     --brownDarkBS: #271E17;
     --brownSoftBS: #5E371C;
     --whiteBS: #fff;
+
+    font-family: "Inter", sans-serif;
 }
 
 * {
@@ -9,7 +14,7 @@
 }
 
 /* Section 1 - Bem-Vindo à Biblios's */
-.bemVindo {
+.container-bemVindo {
     width: 100%;
     height: 100%;
 }
@@ -28,16 +33,17 @@
 }
 
 .logo-navbar {
-    margin-left: 1%;
+    width: 33%;
 }
 
 .logo-navbar img {
-    width: 100%;
+    width: 18%;
     height: 10vh;
 }
 
 .itens-navbar {
-    width: 27%;
+    width: 33%;
+
 }
 
 .itens-navbar a {
@@ -49,15 +55,17 @@
 
 
 .buttons-navbar {
-    gap: 25px;
-    width: 20%;
+    width: 33%;
     height: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    gap: 2%;
+    padding-right: 2%;
 }
 
 .buttons-navbar .button-cadastro {
-    width: 120%;
+    width: 20%;
     height: 3.5vh;
     border-radius: 5%;
 
@@ -67,8 +75,8 @@
 }
 
 .buttons-navbar .button-login {
-    width: 100%;
-    height: 4vh;
+    width: 20%;
+    height: 3.5;
     border-radius: 5%;
 
     color: var(--brownSoftBS);
@@ -101,7 +109,8 @@
 .textoBanner h1 {
     color: var(--whiteBS);
     font-size: 100px;
-
+    font-family: 'Times New Roman', Times, serif;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,4 +125,45 @@
 
     filter: blur(1px);
     opacity: 70%;
+}
+
+
+/* Section 2 - benefícios da leitura */
+.container-leitura {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.textoBeneficios {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoBeneficios p {
+    color: var(--brownSoftBS);
+
+    font-family: "Itim", cursive;
+    width: 50%;
+    font-size: x-large;
+}
+
+.imagemBeneficios {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagemBeneficios img {
+    width: 80%;
+    height: 70vh;
+
+    border-radius: 5%;
 }
