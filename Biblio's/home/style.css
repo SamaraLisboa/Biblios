@@ -6,7 +6,7 @@
     --brownSoftBS: #5E371C;
     --whiteBS: #fff;
 
-    font-family: "Inter", sans-serif;
+    font-family: 'Times New Roman', Times, serif;;
 }
 
 * {
@@ -30,6 +30,7 @@
     height: 20%;
 
     background-color: var(--brownDarkBS);
+    font-family: "Inter", sans-serif;
 }
 
 .logo-navbar {
@@ -65,23 +66,25 @@
 }
 
 .buttons-navbar .button-cadastro {
-    width: 20%;
-    height: 3.5vh;
+    width: 70px;
+    height: 4vh;
     border-radius: 5%;
 
     color: var(--whiteBS);
     background-color: var(--brownSoftBS);
     border: var(--brownDarkBS);
+    cursor: pointer;
 }
 
 .buttons-navbar .button-login {
-    width: 20%;
-    height: 3.5;
+    width: 70px;
+    height: 4vh;
     border-radius: 5%;
 
     color: var(--brownSoftBS);
     background-color: var(--whiteBS);
     border: var(--whiteBS);
+    cursor: pointer;
 }
 
 /* Banner */
@@ -109,7 +112,6 @@
 .textoBanner h1 {
     color: var(--whiteBS);
     font-size: 100px;
-    font-family: 'Times New Roman', Times, serif;
     
     display: flex;
     justify-content: center;
@@ -166,4 +168,82 @@
     height: 70vh;
 
     border-radius: 5%;
+}
+
+.referenciaBeneficios {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+
+    margin-top: 44%;
+
+    width: 100%;
+    height: 5vh;
+}
+
+.referenciaBeneficios p {
+    font-size: smaller;
+}
+
+
+/* Sessão 3 - Biblioteca */
+.biblioteca {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--brownDarkBS);
+
+    padding-top: 2.5%;
+}
+
+.tituloBiblioteca h1 {
+    display: flex;
+    justify-content: center;
+    
+    color: var(--whiteBS);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+
+.containerCards {
+    width: 100%;
+    height: 40vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5%;
+}
+
+.containerCards a {
+    text-decoration: none;
+    color: var(--whiteBS);
+}
+
+.cardGenero { 
+    width: 80%;
+    height: 25vh;
+
+   margin-left: 3%;
+}
+
+.cardGenero img {
+    width: 250px;
+    height: 35vh;
+
+
+    object-fit: cover;
+
+    border-radius: 10%;
+}
+
+.cardGenero p {
+    display: flex;
+    justify-content: center;
+    padding-left: 20%;
+
+    font-family: "Itim", cursive;;
+
 }
