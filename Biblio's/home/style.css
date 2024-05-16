@@ -38,6 +38,7 @@
 
 .logo-navbar {
     width: 33%;
+    margin-left: 3%;
 }
 
 .logo-navbar img {
@@ -66,7 +67,7 @@
     justify-content: flex-end;
     align-items: center;
     gap: 2%;
-    padding-right: 2%;
+    padding-right: 3%;
 }
 
 .buttons-navbar .button-cadastro {
