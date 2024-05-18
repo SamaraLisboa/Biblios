@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="biblioteca.js"></script>
+    <title>Biblio´s</title>
+</head>
+
+<body>
+    <div class="navbar-biblio">
+        <div class="logo-navbar">
+            <img src="../imgs/logo bs fundo branco.png" alt="logo Biblio's" width="100%" height="100%">
+
+
+        </div>
+
+        <div class="itens-navbar">
+            <a href="">Home</a>
+            <a href="">Escolher outro gênero</a>
+            <a href="">Todos os livros</a>
+            <a href="">Autores</a>
+        </div>
+
+        <div class="buttons-navbar">
+            <a href="../acesso/cadastro.html"><button class="button-cadastro">Cadastro</button></a>
+            <a href="../acesso/login.html"><button class="button-login">Login</button></a>
+        </div>
+    </div>
+
+    <section class="containerBiblios">
+
+        <div id="estante">
+            <div class="livros">
+                <img src="../imgs/Dezesseis Luas _ Beautiful Creatures, por Laís.jpg" alt="Livro Dezesseis Luas"
+                    onclick=" modalDezesseisLuas()">
+                    <img src="../imgs/sussuro.jpg" alt="Livro Hush Hush">
+                    <img src="../imgs/Heaven Official Blessing.png" alt="Livro Heavan Official Blessing">
+                    <img src="../imgs/Livro Crepúsculo.jpg" alt="">
+                </div>
+
+            <div class="modal" id="modal" style="display: none;">
+
+                <div id="modalDezesseisLuas">
+                    <img src="../imgs/Dezesseis Luas _ Beautiful Creatures, por Laís.jpg" alt="Livro Dezesseis Luas">
+
+                    <p>Sinopse:
+                        Ethan é um garoto normal de uma pequena cidade do sul dos Estados Unidos e totalmente
+                        atormentado
+                        por sonhos, ou melhor, pesadelos com uma garota que ele nunca conheceu. Até que ela aparece -
+                        Lena
+                        Duchannes é uma adolescente que luta para esconder seus poderes e uma maldição que assombra sua
+                        família há gerações.
+                    </p>
+
+                    <div class="modalButtons">
+                        <a href="https://www.amazon.com.br/Dezesseis-luas-Vol-Kami-Garcia/dp/8501086916?asin=B00BPANS3A&revisionId=c55398b7&format=2&depth=1"
+                            target="_blank">
+                            <button class="button-previaLivro">Ler Prévia</button>
+                        </a>
+
+                        <a href="https://www.amazon.com.br/Dezesseis-luas-Vol-Kami-Garcia/dp/8501086916"
+                            target="_blank">
+                            <button class="button-comprarLivro">Comprar</button>
+                        </a>
+                    </div>
+                    <button class="button-exit" onclick="sairModal()">X</button>
+                </div>
+            </div>
+
+            <div class="prateleiraLivros">
+                <img src="../imgs/Prateleira de madeira.png" alt="prateleira de madeira">
+            </div>
+
+            <div class="livros">
+                <img src="../imgs/A história sem fim.jpg" alt="Livro Dezesseis Luas">
+                <img src="../imgs/Mo dao zu shi.png" alt="Livro Hush Hush">
+                <img src="../imgs/O pequeno príncipe.jpg" alt="Livro Heavan Official Blessing">
+                <img src="../imgs/A bussola de Ouro, de Philip Pullman.jpg" alt="">
+            </div>
+
+            <div class="prateleiraLivros">
+                <img src="../imgs/Prateleira de madeira.png" alt="prateleira de madeira">
+            </div>
+
+            <div class="livros">
+                <img src="../imgs/Uzumaki integral Edition.jpg" alt="Livro Dezesseis Luas">
+                <img src="../imgs/tomie.jpg" alt="Livro Hush Hush">
+                <img src="../imgs/Os 13 porquês.jpg" alt="Livro Heavan Official Blessing">
+                <img src="../imgs/CORALINE - NEIL GAIMAN _ RESENHA - Coisas de Mineira.jpg" alt="">
+            </div>
+
+            <div class="prateleiraLivros">
+                <img src="../imgs/Prateleira de madeira.png" alt="prateleira de madeira">
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
