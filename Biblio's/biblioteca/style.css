@@ -467,7 +467,7 @@ body {
     font-size: x-large;
 }
 
-/* Uzumaki */
+/* Modal Uzumaki */
 #modalUzumaki {
     width: 40%;
     height: 65vh;
@@ -500,7 +500,7 @@ body {
 }
 
 /* Tomie */
-#modalHistoriaSemFim {
+#modalTomie {
     width: 40%;
     height: 65vh;
     background-color: var(--whiteBS);
@@ -512,7 +512,7 @@ body {
 
 }
 
-#modalHistoriaSemFim img {
+#modalTomie img {
     width: 180px;
     margin: 25px;
 
@@ -520,7 +520,7 @@ body {
     position: absolute;
 }
 
-#modalHistoriaSemFim p {
+#modalTomie p {
     width: 50%;
     height: 40vh;
     margin-left: 42%;
@@ -532,7 +532,7 @@ body {
 }
 
 /* Os 13 porquês */
-#modalHistoriaSemFim {
+#modalTrezePorques {
     width: 40%;
     height: 65vh;
     background-color: var(--whiteBS);
@@ -544,7 +544,7 @@ body {
 
 }
 
-#modalHistoriaSemFim img {
+#modalTrezePorques img {
     width: 180px;
     margin: 25px;
 
@@ -552,7 +552,7 @@ body {
     position: absolute;
 }
 
-#modalHistoriaSemFim p {
+#modalTrezePorques p {
     width: 50%;
     height: 40vh;
     margin-left: 42%;
@@ -564,7 +564,7 @@ body {
 }
 
 /* Coraline */
-#modalHistoriaSemFim {
+#modalCoraline {
     width: 40%;
     height: 65vh;
     background-color: var(--whiteBS);
@@ -576,7 +576,7 @@ body {
 
 }
 
-#modalHistoriaSemFim img {
+#modalCoraline img {
     width: 180px;
     margin: 25px;
 
@@ -584,7 +584,7 @@ body {
     position: absolute;
 }
 
-#modalHistoriaSemFim p {
+#modalCoraline p {
     width: 50%;
     height: 40vh;
     margin-left: 42%;

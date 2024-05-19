@@ -78,7 +78,7 @@ function sairModalBussulaDeOuro() {
     sairModal.style.display = "none"
 }
 
-// Modal do livro "Uzumaki"
+// Modal do mangá "Uzumaki"
 function modalUzumaki() {
     let abrirModal = document.getElementById("popup-uzumaki");
     abrirModal.style.display = "block";
@@ -88,22 +88,32 @@ function sairModalUzumaki() {
     sairModal.style.display = "none"
 }
 
-// Modal do livro "Tomie"
-function modalPequenoPrincipe() {
-    let abrirModal = document.getElementById("popup-pequenoPrincipe");
+// Modal do mangá "Tomie"
+function modalTomie() {
+    let abrirModal = document.getElementById("popup-tomie");
     abrirModal.style.display = "block";
 }
-function sairModalPequenoPrincipe() {
-    let sairModal = document.getElementById("popup-pequenoPrincipe")
+function sairModalTomie() {
+    let sairModal = document.getElementById("popup-tomie")
+    sairModal.style.display = "none"
+}
+
+// Modal do livro "Os 13 porquês"
+function modalTrezePorques() {
+    let abrirModal = document.getElementById("popup-trezePorques");
+    abrirModal.style.display = "block";
+}
+function sairModalTrezePorques() {
+    let sairModal = document.getElementById("popup-trezePorques")
     sairModal.style.display = "none"
 }
 
 // Modal do livro "Coraline"
-function modalPequenoPrincipe() {
-    let abrirModal = document.getElementById("popup-pequenoPrincipe");
+function modalCoraline() {
+    let abrirModal = document.getElementById("popup-coraline");
     abrirModal.style.display = "block";
 }
-function sairModalPequenoPrincipe() {
-    let sairModal = document.getElementById("popup-pequenoPrincipe")
+function sairModalCoraline() {
+    let sairModal = document.getElementById("popup-coraline")
     sairModal.style.display = "none"
 }
