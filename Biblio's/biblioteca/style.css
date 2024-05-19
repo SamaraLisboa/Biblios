@@ -23,13 +23,13 @@ body {
 .navbar-biblio {
     width: 100%;
     height: 10vh;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--whiteBS);
     z-index: 1000;
     position: fixed;
+    padding-top: 0%;
 }
 
 .logo-navbar {
@@ -96,8 +96,11 @@ body {
 /* Livros */
 .containerBiblios {
     width: 100%;
-    height: 1300px;
+    height: 1200px;
+
+    padding-top: 7%;
 }
+
 
 .prateleiraLivros {
     width: 100%;
@@ -125,7 +128,7 @@ body {
 }
 
 .livros img {
-    width: 230px;
+    width: 210px;
     height: 50vh;
 
 
@@ -133,6 +136,7 @@ body {
     display: flex;
     object-fit: cover;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .livros img:hover {
@@ -140,13 +144,10 @@ body {
 }
 
 
-
 /* Modal*/
 .modal {
-    position: absolute;
     display: flex;
     position: fixed;
-    align-items: center;
     z-index: 999;
 
     width: 100%;
@@ -154,36 +155,19 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/* DEZESSEIS LUAS  */
-
-#modalDezesseisLuas {
-    width: 40%;
-    height: 65vh;
-    background-color: var(--whiteBS);
-    border-radius: 5%;
-    margin-top: 12%;
-    margin-left: 30%;
-    display: flex;
-    flex-direction: column;
-
-}
-
-#modalDezesseisLuas img {
-    width: 180px;
-    margin: 25px;
-
-    display: flex;
+.button-exit {
     position: absolute;
-}
+    width: 40px;
+    height: 40px;
 
-#modalDezesseisLuas p {
-    width: 50%;
-    height: 40vh;
-    margin-left: 42%;
-    margin-right: 2%;
-    padding-top: 6%;
+    margin-top: 1%;
+    margin-left: 36%;
+    border-radius: 50%;
 
-    color: var(--brownDarkBS);
+    background-color: var(--brownSoftBS);
+    border-color: var(--brownDarkBS);
+    color: var(--whiteBS);
+    cursor: pointer;
     font-size: x-large;
 }
 
@@ -193,7 +177,7 @@ body {
     justify-content: flex-end;
     position: absolute;
 
-    margin-top: 15%;
+    margin-top: 17%;
     margin-left: 3%;
     width: 10%;
     height: 25vh;
@@ -221,23 +205,392 @@ body {
 
 }
 
+/* DEZESSEIS LUAS  */
+#modalDezesseisLuas {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#modalDezesseisLuas img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalDezesseisLuas p {
+    width: 52%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+
 #modalDezesseisLuas a {
     width: 100px;
     height: 5vh;
 }
 
-.button-exit {
+
+/* Sussurro */
+#modalSussurro {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalSussurro img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
     position: absolute;
-    width: 40px;
-    height: 40px;
+}
 
-    margin-top: 1%;
-    margin-left: 36%;
-    border-radius: 50%;
+#modalSussurro p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
 
-    background-color: var(--brownSoftBS);
-    border-color: var(--brownDarkBS);
-    color: var(--whiteBS);
-    cursor: pointer;
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* Heaven Official Blessing */
+#modalHeaven {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalHeaven img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalHeaven p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* Crepúsculo */
+#modalCrepusculo {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalCrepusculo img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalCrepusculo p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* A história sem fim */
+#modalHistoriaSemFim {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalHistoriaSemFim img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalHistoriaSemFim p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* Mo Dao zu Shi*/
+#modalMoDaoZuShi {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalMoDaoZuShi img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalMoDaoZuShi p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* O pequeno príncipe */
+#modalpequenoPrincipe {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalpequenoPrincipe img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalpequenoPrincipe p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* A bússula de ouro */
+#modalBussulaDeOuro {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalBussulaDeOuro img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalBussulaDeOuro p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* Uzumaki */
+#modalUzumaki {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalUzumaki img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalUzumaki p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* Tomie */
+#modalHistoriaSemFim {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalHistoriaSemFim img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalHistoriaSemFim p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* Os 13 porquês */
+#modalHistoriaSemFim {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalHistoriaSemFim img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalHistoriaSemFim p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
+    font-size: x-large;
+}
+
+/* Coraline */
+#modalHistoriaSemFim {
+    width: 40%;
+    height: 65vh;
+    background-color: var(--whiteBS);
+    border-radius: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#modalHistoriaSemFim img {
+    width: 180px;
+    margin: 25px;
+
+    display: flex;
+    position: absolute;
+}
+
+#modalHistoriaSemFim p {
+    width: 50%;
+    height: 40vh;
+    margin-left: 42%;
+    margin-right: 2%;
+    padding-top: 6%;
+
+    color: var(--brownDarkBS);
     font-size: x-large;
 }

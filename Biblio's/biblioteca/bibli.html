@@ -10,11 +10,10 @@
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <div class="navbar-biblio">
         <div class="logo-navbar">
             <img src="../imgs/logo bs fundo branco.png" alt="logo Biblio's" width="100%" height="100%">
-
-
         </div>
 
         <div class="itens-navbar">
@@ -30,44 +29,245 @@
         </div>
     </div>
 
+    <!-- Modals -->
+
+     <!-- Modal do livro Dezesseis Luas -->
+    <div class="modal" id="popup-dezesseisLuas" style="display: none;">
+        <div id="modalDezesseisLuas">
+            <img src="../imgs/Dezesseis Luas _ Beautiful Creatures, por Laís.jpg" alt="Livro Dezesseis Luas">
+
+            <p><b>Sinopse:</b>
+                Ethan é um garoto normal de uma pequena cidade do sul dos Estados Unidos e totalmente
+                atormentado
+                por sonhos, ou melhor, pesadelos com uma garota que ele nunca conheceu. Até que ela aparece -
+                Lena
+                Duchannes é uma adolescente que luta para esconder seus poderes e uma maldição que assombra sua
+                família há gerações.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.amazon.com.br/Dezesseis-luas-Vol-Kami-Garcia/dp/8501086916?asin=B00BPANS3A&revisionId=c55398b7&format=2&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Dezesseis-luas-Vol-Kami-Garcia/dp/8501086916"
+                    target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalDezesseisLuas()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal do livro Sussurro -->
+    <div class="modal" id="popup-sussuro" style="display: none;">
+        <div id="modalSussurro">
+            <img src="../imgs/sussuro.jpg" alt="Livro Sussuro">
+
+            <p><b>Sinopse:</b>
+                "Sussurro" é um romance sobrenatural que acompanha a vida de Nora Grey, uma estudante intrigada por Patch Cipriano, um novo aluno enigmático. Conforme Nora se aproxima dele, segredos sombrios começam a emergir, levando-a a uma perigosa jornada de romance proibido e mistério sobrenatural.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.amazon.com.br/Sussurro-s%C3%A9rie-Hush-1/dp/8598078786?asin=B009M856G4&revisionId=f3e80e40&format=1&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Sussurro-s%C3%A9rie-Hush-1/dp/8598078786" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalSussurro()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal do livro Heaven Official's Blessing -->
+    <div class="modal" id="popup-heaven" style="display: none;">
+        <div id="modalHeaven">
+            <img src="../imgs/Heaven Official Blessing.png" alt="Livro Heaven Official Blessing">
+
+            <p><b>Sinopse:</b>
+                Xie Lian, um ex-príncipe divino conhecido como o "Fantasma Exilado" é auxiliado por Hua Cheng, um poderoso fantasma, a desvendar segredos celestiais e enfrentar desafios para encontrar redenção. Numa trama de fantasia e romance, a história explora temas de amor, sacrifício e a luta entre o bem e o mal.
+            </p>
+
+            <div class="modalButtons">
+                <!-- <a href="https://www.amazon.com.br/Sussurro-s%C3%A9rie-Hush-1/dp/8598078786?asin=B009M856G4&revisionId=f3e80e40&format=1&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a> -->
+
+                <a href="https://www.amazon.com.br/Heaven-Officials-Blessing-Tian-Novel/dp/1648279171" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalHeaven()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal do livro Crepúsculo -->
+    <div class="modal" id="popup-crepusculo" style="display: none;">
+        <div id="modalCrepusculo">
+            <img src="../imgs/Livro Crepúsculo.jpg" alt="Livro Crepúsculo">
+
+            <p><b>Sinopse:</b>
+                Bella Swan se apaixona por Edward Cullen, um vampiro, desencadeando um romance proibido repleto de perigos sobrenaturais e dilemas morais. O livro explora temas de amor, mortalidade e a eterna luta entre o desejo e a razão.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.amazon.com.br/Crep%C3%BAsculo-Stephenie-Meyer/dp/8598078301/ref=sr_1_1?crid=1UU4NST60XYGK&dib=eyJ2IjoiMSJ9.kvpiHnikuOcF2ecK1P2oPzF_QSZbgYe7kCN_OCgv1MO7f_2OcW3kIxeiQVfvX-SaVGJkuHxt0auHuLQdH3pRn8JQIZVJARqFcNzidREEG_IjjeEufdQKL0bSyFCg0Skx9xKMFv_yQc7IYUFFwGOcvBf_hNrIBVVEcWUadNs2BgxYbGXrtuYQva59SSfZS2oHPr8E7kVsZqiGrk33Xb0766hipStZKcmu2imgmbZcAFo.igoeePIUCLqRdaqZYU31_6gGZMeWpAQkyl7am2uf7Kg&dib_tag=se&keywords=crepusculo&qid=1716077883&s=books&sprefix=creous%2Cstripbooks%2C288&sr=1-1&asin=B009M8CU86&revisionId=ce251289&format=1&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Crep%C3%BAsculo-Stephenie-Meyer/dp/8598078301/ref=sr_1_1?crid=1UU4NST60XYGK&dib=eyJ2IjoiMSJ9.kvpiHnikuOcF2ecK1P2oPzF_QSZbgYe7kCN_OCgv1MO7f_2OcW3kIxeiQVfvX-SaVGJkuHxt0auHuLQdH3pRn8JQIZVJARqFcNzidREEG_IjjeEufdQKL0bSyFCg0Skx9xKMFv_yQc7IYUFFwGOcvBf_hNrIBVVEcWUadNs2BgxYbGXrtuYQva59SSfZS2oHPr8E7kVsZqiGrk33Xb0766hipStZKcmu2imgmbZcAFo.igoeePIUCLqRdaqZYU31_6gGZMeWpAQkyl7am2uf7Kg&dib_tag=se&keywords=crepusculo&qid=1716077883&s=books&sprefix=creous%2Cstripbooks%2C288&sr=1-1" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalCrepusculo()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal A história sem fim -->
+    <div class="modal" id="popup-historiaSemFim" style="display: none;">
+        <div id="modalHistoriaSemFim">
+            <img src="../imgs/A história sem fim.jpg" alt="Livro A história sem fim">
+
+            <p><b>Sinopse:</b>
+                Bastian Bux, um jovem que descobre um livro mágico que transporta-o para o reino de Fantasia. Ele se vê envolvido em uma aventura épica para salvar esse mundo, enfrentando desafios e descobrindo a importância da imaginação e da coragem.
+            </p>
+
+            <div class="modalButtons">
+                <!-- <a href=""
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a> -->
+
+                <a href="https://www.amazon.com.br/Hist%C3%B3ria-sem-fim-Michael-Ende/dp/6555540214/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.MbdYgb1edjsD2DrB-rAk9ez4nlh1YP5BwZNa3ADn39YkiDh2QgM8ZfP2JXfoxnjxjbjDT_w5WfhVW93FUj7Sho3F8wht4zw7m3jss4tgsx9ERRLbGkYVc3EcnoLdviICvzYksc94McYd5rIO9TY-WN39zn0PhaO8Ht_Ba_viY-2K98n5CmLlTofBsSc9LGCpy65cpXwFlF60CFh3oUWGqfoAgSnsbII37CmkYIm4zcA.syD20xVQfG8FxMyiSOtZxSuXZ1Mv1QKjC5K9tNjIzzw&qid=1716081481&sr=1-1" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalHistoriaSemFim()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal Mo Dao Zu Shi -->
+    <div class="modal" id="popup-moDaoZuShi" style="display: none;">
+        <div id="modalMoDaoZuShi">
+            <img src="../imgs/Mo dao zu shi.png" alt="Livro Mo Dao Zu Shi">
+
+            <p><b>Sinopse:</b>
+                Treze anos se passam e Wei Wuxian acorda em um corpo de um rapaz desconhecido... Wei Wuxian, um cultivador renegado, e Lan Wangji, um mestre cultivador, unem forças para desvendar segredos antigos e lutar contra uma conspiração que ameaça a paz entre os clãs. 
+            </p>
+
+            <div class="modalButtons">
+                <!-- <a href=""
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a> -->
+
+                <a href="https://www.amazon.com.br/Mo-Dao-Shi-Cultiva%C3%A7%C3%A3o-Demon%C3%ADaca/dp/6586799627#:~:text=Vis%C3%A3o%20geral%20do%20livro&text=Precisando%20lidar%20com%20fantasmas%20do,e%20at%C3%A9%20onde%20chegar%C3%A3o%20juntos%3F" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalMoDaoZuShi()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal O pequeno príncipe -->
+    <div class="modal" id="popup-pequenoPrincipe" style="display: none;">
+        <div id="modalpequenoPrincipe">
+            <img src="../imgs/O pequeno príncipe.jpg" alt="Livro O pequeno príncipe">
+
+            <p><b>Sinopse:</b>
+                Em "O Pequeno Príncipe", um aviador encontra um jovem príncipe perdido no deserto. Através das histórias do príncipe sobre suas viagens por diferentes planetas, a obra explora temas como amizade, imaginação e amor, convidando os leitores a refletirem sobre a vida e a inocência perdida.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.amazon.com.br/Pequeno-Pr%C3%ADncipe-Edi%C3%A7%C3%A3o-Luxo/dp/8581303072?asin=B00S8CRRGW&revisionId=f00de7ad&format=2&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Pequeno-Pr%C3%ADncipe-Edi%C3%A7%C3%A3o-Luxo/dp/8581303072" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalPequenoPrincipe()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal A bússula de ouro -->
+    <div class="modal" id="popup-bussuladeOuro" style="display: none;">
+        <div id="modalBussulaDeOuro">
+            <img src="../imgs/A bussola de Ouro, de Philip Pullman.jpg" alt="Livro A bússula de ouro">
+
+            <p><b>Sinopse:</b>
+                A órfã Lyra Belacqua vive em um mundo paralelo onde as almas dos humanos se manifestam na forma animal, e são chamadas de daemons. Ela descobre que diversas crianças estão desaparecendo, entre elas seu melhor amigo Roger, então vai com Pantalaimon, seu daemon, em busca de respostas. 
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.amazon.com.br/b%C3%BAssola-ouro-Philip-Pullman/dp/8556510426?asin=B0743M5VLS&revisionId=4a15d10a&format=1&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/b%C3%BAssola-ouro-Philip-Pullman/dp/8556510426" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalBussulaDeOuro()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal Uzumaki -->
+    <div class="modal" id="popup-uzumaki" style="display: none;">
+        <div id="modalUzumaki">
+            <img src="../imgs/Uzumaki integral Edition.jpg" alt="mangá Uzumaki">
+
+            <p><b>Sinopse:</b>
+                "Uzumaki" é um mangá de horror que se passa em Kurôzu-cho, onde uma maldição espiral causa eventos sobrenaturais perturbadores. Kirie Goshima e Shuichi Saito testemunham os horrores da maldição enquanto lutam para sobreviver e entender sua origem.
+            </p>
+
+            <!-- <div class="modalButtons">
+                <a href=""
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a> -->
+
+                <a href="https://www.amazon.com.br/Uzumaki-Edi%C3%A7%C3%A3o-atual-Junji-Ito/dp/6555140577/ref=sr_1_1?crid=18PBCM20F0HEV&dib=eyJ2IjoiMSJ9.OOoR0LoziaX4w_q2FdJSPKGbZZyBhz46zqh6XzBcZRkz--EBJfyOecpO4ws1-iYf22CgYOjBbPihwp0FFPhlryM2exp4sjc4jFSqaNCrvxlHhCh355Awpqqwx2xfx6n8aEbWE-H9p7hgi8-RtFsHKt8FFJRckaMx4jAebmdbwAhJ9tnAFokBUjT1SQ8-DmflJ_zP4-LVuKsnqhw7I_XlazkFGiGSneJgM8oMHrLPwEJ8BFQY8jqOyjO3TPry7LB6u-JfFaZGLf7115BkkBjhyHZqTsNJb80Kw8rSQc2ZeIM.T7jIXCx3AEKYDdul9ceQdylpLBlhU4S51PxKziyAUCc&dib_tag=se&keywords=manga+uzumaki+junji+ito&qid=1716086561&sprefix=manga+uzumaki+%2Caps%2C635&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalUzumaki()">X</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <section class="containerBiblios">
 
-        <div id="estante">
+            <!-- Livros de Romance -->
             <div class="livros">
                 <img src="../imgs/Dezesseis Luas _ Beautiful Creatures, por Laís.jpg" alt="Livro Dezesseis Luas"
-                    onclick=" modalDezesseisLuas()">
-                    <img src="../imgs/sussuro.jpg" alt="Livro Hush Hush">
-                    <img src="../imgs/Heaven Official Blessing.png" alt="Livro Heavan Official Blessing">
-                    <img src="../imgs/Livro Crepúsculo.jpg" alt="">
-                </div>
+                onclick="modalDezesseisLuas()">
 
-            <div class="modal" id="modal" style="display: none;">
+                <img src="../imgs/sussuro.jpg" alt="Livro Hush Hush" 
+                onclick="modalSussuro()">
 
-                <div id="modalDezesseisLuas">
-                    <img src="../imgs/Dezesseis Luas _ Beautiful Creatures, por Laís.jpg" alt="Livro Dezesseis Luas">
+                <img src="../imgs/Heaven Official Blessing.png" alt="Livro Heavan Official Blessing"
+                onclick="modalHeaven()">
 
-                    <p>Sinopse:
-                        Ethan é um garoto normal de uma pequena cidade do sul dos Estados Unidos e totalmente
-                        atormentado
-                        por sonhos, ou melhor, pesadelos com uma garota que ele nunca conheceu. Até que ela aparece -
-                        Lena
-                        Duchannes é uma adolescente que luta para esconder seus poderes e uma maldição que assombra sua
-                        família há gerações.
-                    </p>
-
-                    <div class="modalButtons">
-                        <a href="https://www.amazon.com.br/Dezesseis-luas-Vol-Kami-Garcia/dp/8501086916?asin=B00BPANS3A&revisionId=c55398b7&format=2&depth=1"
-                            target="_blank">
-                            <button class="button-previaLivro">Ler Prévia</button>
-                        </a>
-
-                        <a href="https://www.amazon.com.br/Dezesseis-luas-Vol-Kami-Garcia/dp/8501086916"
-                            target="_blank">
-                            <button class="button-comprarLivro">Comprar</button>
-                        </a>
-                    </div>
-                    <button class="button-exit" onclick="sairModal()">X</button>
-                </div>
+                <img src="../imgs/Livro Crepúsculo.jpg" alt="Livro Crepúsculo"
+                onclick="modalCrepusculo()">
             </div>
 
             <div class="prateleiraLivros">
@@ -75,10 +275,14 @@
             </div>
 
             <div class="livros">
-                <img src="../imgs/A história sem fim.jpg" alt="Livro Dezesseis Luas">
-                <img src="../imgs/Mo dao zu shi.png" alt="Livro Hush Hush">
-                <img src="../imgs/O pequeno príncipe.jpg" alt="Livro Heavan Official Blessing">
-                <img src="../imgs/A bussola de Ouro, de Philip Pullman.jpg" alt="">
+                <img src="../imgs/A história sem fim.jpg" alt="Livro A história sem fim"
+                onclick="modalHistoriaSemFim()">
+                <img src="../imgs/Mo dao zu shi.png" alt="Livro Mo Dao Zu Shi"
+                onclick="modalMoDaoZuShi()">
+                <img src="../imgs/O pequeno príncipe.jpg" alt="Livro O pequeno príncipe"
+                onclick="modalPequenoPrincipe()">
+                <img src="../imgs/A bussola de Ouro, de Philip Pullman.jpg" alt="Livro A bússula de ouro"
+                onclick="modalBussulaDeOuro()">
             </div>
 
             <div class="prateleiraLivros">
@@ -86,7 +290,8 @@
             </div>
 
             <div class="livros">
-                <img src="../imgs/Uzumaki integral Edition.jpg" alt="Livro Dezesseis Luas">
+                <img src="../imgs/Uzumaki integral Edition.jpg" alt="Mangá Uzumaki"
+                onclick="modalUzumaki()">
                 <img src="../imgs/tomie.jpg" alt="Livro Hush Hush">
                 <img src="../imgs/Os 13 porquês.jpg" alt="Livro Heavan Official Blessing">
                 <img src="../imgs/CORALINE - NEIL GAIMAN _ RESENHA - Coisas de Mineira.jpg" alt="">
@@ -95,8 +300,7 @@
             <div class="prateleiraLivros">
                 <img src="../imgs/Prateleira de madeira.png" alt="prateleira de madeira">
             </div>
-        </div>
-
+    
     </section>
 
 </body>
