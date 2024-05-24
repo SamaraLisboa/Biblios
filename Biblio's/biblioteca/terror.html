@@ -5,38 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="biblioteca.js"></script>
-    <title>Gênero romance - Biblio's</title>
+    <title>Gênero terror - Biblios</title>
 </head>
 <body>
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="biblioteca.js"></script>
-        <title>Gênero romance - Biblio's</title>
-    </head>
-    <body>
-         <!-- NAVBAR -->
-         <div class="navbar-biblio">
-            <div class="logo-navbar">
-                <img src="../imgs/logo bs fundo branco.png" alt="logo Biblio's" width="100%" height="100%">
-            </div>
-    
-            <div class="itens-navbar">
-                <a href="../home/home.html">Home</a>
-                <a href="">Escolher outro gênero</a>
-                <a href="">Todos os livros</a>
-            </div>
-    
-            <div class="buttons-navbar">
-                <a href="../acesso/cadastro.html"><button class="button-cadastro">Cadastro</button></a>
-                <a href="../acesso/login.html"><button class="button-login">Login</button></a>
-            </div>
+      <!-- NAVBAR -->
+      <div class="navbar-biblio">
+        <div class="logo-navbar">
+            <img src="../imgs/logo bs fundo branco.png" alt="logo Biblio's" width="100%" height="100%">
         </div>
-    
-        <!-- Modal Uzumaki -->
+
+        <div class="itens-navbar">
+            <a href="../home/home.html">Home</a>
+            <a href="../home/home.html#biblioteca">Escolher outro gênero</a>
+            <a href="../biblioteca/bibli.html">Todos os livros</a>
+        </div>
+
+        <div class="buttons-navbar">
+            <a href="../acesso/cadastro.html"><button class="button-cadastro">Cadastro</button></a>
+            <a href="../acesso/login.html"><button class="button-login">Login</button></a>
+        </div>
+    </div>
+
+    <!-- Modal Uzumaki -->
     <div class="modal" id="popup-uzumaki" style="display: none;">
         <div id="modalUzumaki">
             <img src="../imgs/Uzumaki integral Edition.jpg" alt="Mangá Uzumaki">
@@ -130,31 +120,28 @@
         </div>
     </div>
 
-      <!-- Sessão de livros -->
-    <section class="containerRomance">
+    <section class="containerBiblios">
 
-        <h1>Livros de Terror</h1>
+        <h1>Gênero Terror</h1>
 
-        <!-- Livros de Romance -->
-        <div class="livros">
-            
-            <img src="../imgs/Uzumaki integral Edition.jpg" alt="Mangá Uzumaki"
+            <div class="livros">
+                <img src="../imgs/Uzumaki integral Edition.jpg" alt="Mangá Uzumaki"
                 onclick="modalUzumaki()">
-
                 <img src="../imgs/tomie.jpg" alt="Mangá Tomie" 
                 onclick="modalTomie()">
-
                 <img src="../imgs/Os 13 porquês.jpg" alt="Livro Os 13 porquês"
                 onclick="modalTrezePorques()">
-                
                 <img src="../imgs/CORALINE - NEIL GAIMAN _ RESENHA - Coisas de Mineira.jpg" alt="Livro Coraline"
                 onclick="modalCoraline()">
+            </div>
 
-        <div class="prateleiraSessoes">
-            <img src="../imgs/Prateleira de madeira.png" alt="prateleira de madeira">
-        </div>
-</section>
+            <div class="prateleiraLivros">
+                <img src="../imgs/Prateleira de madeira.png" alt="prateleira de madeira">
+            </div>
     
-        
+    </section>
+
+
+    
 </body>
 </html>
