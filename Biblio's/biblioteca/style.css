@@ -605,7 +605,7 @@ body {
 }
 
 
-/* SESSÃO DE LIVROS DE ROMANCE */
+/* SESSÃO DE LIVROS*/
 .containerLivrosGeneros {
     width: 100%;
     height: 500px;
@@ -637,4 +637,7 @@ body {
     font-size: xx-large;
 }
 
+#bodyAventura {
+    background-color: var(--whiteBS);
+}
 
