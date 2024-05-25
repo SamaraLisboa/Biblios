@@ -16,7 +16,7 @@
     <section class="container-bemVindo">
 
         <!-- NavBar -->
-         <div class="navbar-bemvindo">
+        <div class="navbar-bemvindo">
             <div class="logo-navbar">
                 <img src="../imgs/logo bs fundo transparente.png" alt="logo Biblio's" width="100%" height="100%">
             </div>
@@ -24,6 +24,7 @@
             <div class="itens-navbar">
                 <a href="#bannerHome">Home</a>
                 <a href="#biblioteca">Biblioteca</a>
+                <a href="#quiz">Quiz</a>
                 <a href="#onu">ONU</a>
                 <a href="#sobreBiblios">Sobre a Biblio's</a>
             </div>
@@ -35,7 +36,7 @@
         </div>
 
         <!-- Banner -->
-       <div class="filtromarrom-banner" id="bannerHome">
+        <div class="filtromarrom-banner" id="bannerHome">
             <img src="../imgs/livros para banner.jpg" alt="livros banner">
         </div>
         <div class="textoBanner">
@@ -82,39 +83,159 @@
 
         <div class="containerCards">
 
-            <a href="../biblioteca/romance.html"><div class="cardGenero">
-                <img src="../imgs/imagem romance.jpg" alt="Gênero literário romance">
-                <p>Romance</p>
-            </div></a>
+            <a href="../biblioteca/romance.html">
+                <div class="cardGenero">
+                    <img src="../imgs/imagem romance.jpg" alt="Gênero literário romance">
+                    <p>Romance</p>
+                </div>
+            </a>
 
-            <a href="../biblioteca/aventura.html"><div class="cardGenero">
-                <img src="../imgs/aventura.jpg" alt="Gênero literário aventura">
-                <p>Aventura</p>
-            </div></a>
+            <a href="../biblioteca/aventura.html">
+                <div class="cardGenero">
+                    <img src="../imgs/aventura.jpg" alt="Gênero literário aventura">
+                    <p>Aventura</p>
+                </div>
+            </a>
         </div>
 
-        <a href="../biblioteca/terror.html"><div class="containerCards">
-            <div class="cardGenero">
-                <img src="../imgs/imagem terror.jpg" alt="Gênero literário terror">
-                <p>Terror</p>
-            </div></a>
+        <a href="../biblioteca/terror.html">
+            <div class="containerCards">
+                <div class="cardGenero">
+                    <img src="../imgs/imagem terror.jpg" alt="Gênero literário terror">
+                    <p>Terror</p>
+                </div>
+        </a>
 
-            <a href="../biblioteca/bibli.html"><div class="cardGenero">
+        <a href="../biblioteca/bibli.html">
+            <div class="cardGenero">
                 <img src="../imgs/estante de livros.jpg" alt="Todos os gêneros literários">
                 <p>Todos os gêneros</p>
-            </div></a>
-</div>
+            </div>
+        </a>
+        </div>
     </section>
 
-    <!-- Section 4 - ONU-->
-    <section class="containerONU" id="onu">
+    <!-- Section 4 - Quiz -->
+    <section class="sectionQuiz" id="quiz">
+
+        <div class="containerCadsQuiz">
+            <div class="cardQuiz">
+                <p>Qual seu gênero literário favorito?</p>
+                <div class="inputsQuiz">
+                    <input type="radio" id="inputQuiz_aventura" name="inputGeneroFavorito">
+                    <label for="inputQuiz_aventura">Aventura</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_romance" name="inputGeneroFavorito">
+                    <label for="inputQuiz_romance">Romance</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_terror" name="inputGeneroFavorito">
+                    <label for="inputQuiz_terror">Terror</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_outro" name="inputGeneroFavorito">
+                    <label for="inputQuiz_outro">Outro</label>
+                </div>
+
+                <button>Próxima Pergunta</button>
+            </div>
+
+            <div class="cardQuiz" style="display: none;">
+                <p>Você conhecia alguma das recomendações?</p>
+                <div class="inputsQuiz">
+                    <input type="radio" id="inputQuiz_aventura" name="inputGeneroFavorito">
+                    <label for="inputQuiz_aventura">Aventura</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_romance" name="inputGeneroFavorito">
+                    <label for="inputQuiz_romance">Romance</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_terror" name="inputGeneroFavorito">
+                    <label for="inputQuiz_terror">Terror</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_outro" name="inputGeneroFavorito">
+                    <label for="inputQuiz_outro">Outro</label>
+
+                </div>
+            </div>
+
+            <div class="cardQuiz" style="display: none;">
+                <p>Você conhecia alguma das recomendações?</p>
+                <div class="inputsQuiz">
+                    <input type="radio" id="inputQuiz_aventura" name="inputGeneroFavorito">
+                    <label for="inputQuiz_aventura">Aventura</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_romance" name="inputGeneroFavorito">
+                    <label for="inputQuiz_romance">Romance</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_terror" name="inputGeneroFavorito">
+                    <label for="inputQuiz_terror">Terror</label>
+                    <br>
+                    <input type="radio" id="inputQuiz_outro" name="inputGeneroFavorito">
+                    <label for="inputQuiz_outro">Outro</label>
+                </div>
+
+                <div class="cardQuiz" style="display: none;">
+                    <p>Você conhecia alguma das recomendações?</p>
+                    <div class="inputsQuiz">
+                        <input type="radio" id="inputQuiz_aventura" name="inputGeneroFavorito">
+                        <label for="inputQuiz_aventura">Aventura</label>
+                        <br>
+                        <input type="radio" id="inputQuiz_romance" name="inputGeneroFavorito">
+                        <label for="inputQuiz_romance">Romance</label>
+                        <br>
+                        <input type="radio" id="inputQuiz_terror" name="inputGeneroFavorito">
+                        <label for="inputQuiz_terror">Terror</label>
+                        <br>
+                        <input type="radio" id="inputQuiz_outro" name="inputGeneroFavorito">
+                        <label for="inputQuiz_outro">Outro</label>
+                    </div>
+                </div>
+
+            </div>
 
     </section>
 
-    <!-- Section 5 - Sobre a Biblo´s -->
+
+
+
+
+    <!-- Section 6 - Sobre a Biblo´s -->
     <section class="containerSobre" id="sobreBiblios">
 
+        <div id="containerFoto">
+            <div id="fotoSobre"></div>
+            <span>Samara Lisboa Bueno</span>
+        </div>
+
+        <p>
+            A biblio’s representa uma coletânea de alguns livros que são fortemente de minha
+            preferência, seja pela
+            história ou lembrança de alguma fase que tal me representou...
+            <br><br>
+            Foi através dos livros que dei o primeiro passo no amor pelo estudo e por conhecer coisas novas e viver
+            experiências ditas impossíveis para minha realidade, refletindo fortes e gentis personagens que conquistaram
+            seus sonhos e objetivos através do esforço e dedicação, e além de tudo, a perseverança.
+        </p>
     </section>
+
+    <!-- Section 5 - ONU-->
+    <section class="containerONU" id="onu">
+        <div class="textosOnu">
+            <img src="../imgs/ONU Bem-Estar e Saúde.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam tempore voluptas consectetur fuga nemo
+                quae consequatur cumque culpa eveniet. Magni repudiandae quis officia. Sed consequatur provident
+                delectus, optio dolor amet?</p>
+        </div>
+
+        <div class="textosOnu">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nihil quas praesentium quasi
+                commodi dignissimos quo omnis reprehenderit? Placeat quis repellendus maiores, molestias ipsam eveniet.
+                Aliquid nam mollitia ipsam dolorum!</p>
+            <img src="../imgs/ONU 4 Educação e Qualidade de Vida.png" alt="">
+        </div>
+
+    </section>
+
+
+    <div class="footer">a</div>
 </body>
 
 </html>
