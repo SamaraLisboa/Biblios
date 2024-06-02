@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/acesso.css">
+  <script src="../public/js/sessao.js"></script>
+  <title>Biblio's</title>
+</head>
+
+<body>
+
+  <div class="navbar-bemvindo">
+    <div class="logo-navbar">
+      <img src="./assets/logo bs fundo transparente.png" alt="logo Biblio's" width="100%" height="100%">
+    </div>
+
+    <div class="itens-navbar">
+      <a href="index.html#bannerHome">Home</a>
+      <a href="../public/index.html#biblioteca">Biblioteca</a>
+      <a href="#quiz">Quiz</a>
+      <a href="../public/index.html#onu">ONU</a>
+      <a href="../public/index.html#sobreBiblios">Sobre a Biblio's</a>
+    </div>
+
+    <div class="buttons-navbar">
+      <a href="login.html"><button class="button-login">Login</button></a>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="alerta_erro">
+    <div class="card_erro" id="cardErro">
+      <span id="mensagem_erro"></span>
+    </div>
+  </div>
+
+  <div class="containerCadastro">
+
+    <div class="cardCadastro">
+      <h2>Cadastre-se</h2>
+
+      <div class="inputsCadastro">
+        <label for="input_nome_usuario">Nome de usuário:</label>
+        <input type="text" id="input_nome_usuario">
+      </div>
+
+      <div class="inputsCadastro">
+        <label for="input_email">Email:</label>
+        <input type="text" id="input_email">
+      </div>
+
+      <div class="inputsCadastro">
+        <label for="input_senha">Senha:</label>
+        <input type="text" id="input_senha">
+      </div>
+
+      <div class="inputsCadastro">
+        <label for="input_confirmacao_senha">Confirmação da senha:</label>
+        <input type="text" id="input_confirmacao_senha">
+      </div>
+
+      <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
+
+      <button onclick="cadastrar()">Cadastrar</button>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+<script>
+  function cadastrar() {
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = input_nome_usuario.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_senha.value;
+    var confirmacaoSenhaVar = input_confirmacao_senha.value;
+    //   var empresaVar = listaEmpresas.value
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+      // empresaVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Por favor, preencha todos os campos para prosseguir!";
+
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>

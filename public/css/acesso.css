@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Inter:wght@100..900&family=Itim&display=swap');
+
+:root {
+    --brownDarkBS: #271E17;
+    --brownSoftBS: #5E371C;
+    --whiteBS: #fff;
+    --grayBS: #D9D9D9;
+
+    font-family: 'Times New Roman', Times, serif;
+    ;
+}
+
+* {
+    margin: 0;
+}
+
+/* Navbar */
+.navbar-bemvindo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 10vh;
+
+    background-color: var(--brownDarkBS);
+    font-family: "Inter", sans-serif;
+}
+
+.logo-navbar {
+    width: 33%;
+    margin-left: 3%;
+}
+
+.logo-navbar img {
+    width: 18%;
+    height: 10vh;
+}
+
+.itens-navbar {
+    width: 33%;
+
+}
+
+.itens-navbar a {
+    text-decoration: none;
+    color: var(--whiteBS);
+
+    margin: 2%;
+}
+
+
+.buttons-navbar {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2%;
+    padding-right: 3%;
+}
+
+.buttons-navbar .button-cadastro {
+    width: 70px;
+    height: 4vh;
+    border-radius: 5%;
+
+    color: var(--whiteBS);
+    background-color: var(--brownSoftBS);
+    border: var(--brownDarkBS);
+    cursor: pointer;
+}
+
+.buttons-navbar .button-login {
+    width: 70px;
+    height: 4vh;
+    border-radius: 5%;
+
+    color: var(--brownSoftBS);
+    background-color: var(--whiteBS);
+    border: var(--whiteBS);
+    cursor: pointer;
+}
+
+/* Todos */
+h2 {
+    text-align: center;
+    font-size: x-large;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+a {
+    text-decoration-color: #CD853F;
+    color: 	#CD853F;
+}
+
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #271E17 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+}
+
+.card_erro #mensagem_erro {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+/* Cadastro */
+.containerCadastro {
+    width: 100%;
+    height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/livros\ e\ flores.jfif);
+}
+
+.bannerCadastro {
+    width: 100%;
+    height: 89vh;
+}
+
+.inputsCadastro {
+    width: 80%;
+}
+
+.cardCadastro {
+    width: 40%;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--whiteBS);
+
+    border-radius: 5%;
+    opacity: 95%;
+}
+
+.inputsCadastro {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputsCadastro input {
+    width: 70%;
+    height: 5vh;
+    margin-bottom: 3%;
+
+    background-color: var(--grayBS);
+    border-color: var(--brownDarkBS);
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.inputsCadastro label {
+    width: 70%;
+    font-size: larger;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cardCadastro p {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.cardCadastro button {
+    width: 20%;
+    height: 5vh;
+    margin-top: 2%;
+    color: var(--whiteBS);
+    background-color: var(--brownSoftBS);
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.alerta_erro {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Login */
+.containerLogin {
+    width: 100%;
+    height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/livros\ e\ flores.jfif);
+}
+
+.cardLogin {
+    width: 40%;
+    height: 60vh;
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--whiteBS);
+
+    border-radius: 5%;
+    opacity: 95%;
+}
+
+.cardLogin input {
+    width: 70%;
+    height: 5vh;
+    margin-bottom: 3%;
+
+    background-color: var(--grayBS);
+    border-color: var(--brownDarkBS);
+    border-width: 1px;
+    font-size: large;
+}
+
+.cardLogin label {
+    font-size: larger;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+}
+
+.cardLogin p {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.cardLogin button {
+    width: 20%;
+    height: 5vh;
+    margin-top: 2%;
+    color: var(--whiteBS);
+    background-color: var(--brownSoftBS);
+    border-radius: 5%;
+    cursor: pointer;
+}

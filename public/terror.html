@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/biblioteca.css">
+    <script src="../public/js/biblioteca.js"></script>
+    <title>Gênero terror - Biblios</title>
+</head>
+<body>
+      <!-- NAVBAR -->
+      <div class="navbar-biblio">
+        <div class="logo-navbar">
+            <img src="../public/assets/logo bs fundo branco.png" alt="logo Biblio's" width="100%" height="100%">
+        </div>
+
+        <div class="itens-navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#biblioteca">Escolher outro gênero</a>
+            <a href="bibli.html">Todos os livros</a>
+        </div>
+
+        <div class="buttons-navbar">
+            <a href="cadastro.html"><button class="button-cadastro">Cadastro</button></a>
+            <a href="login.html"><button class="button-login">Login</button></a>
+        </div>
+    </div>
+
+    <!-- Modal Uzumaki -->
+    <div class="modal" id="popup-uzumaki" style="display: none;">
+        <div id="modalUzumaki">
+            <img src="../public/assets/Uzumaki integral Edition.jpg" alt="Mangá Uzumaki">
+
+            <p><b>Sinopse:</b>
+                "Uzumaki" é um mangá de horror de Junji Ito que segue Kirie e Shuichi em uma cidade assombrada por uma maldição de espirais. Conforme a obsessão cresce, a cidade e seus habitantes se deformam em formas grotescas, mergulhando-os em um pesadelo surreal de horror cósmico.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.youtube.com/watch?v=Y96XYyb9Whk"
+                    target="_blank">
+                    <button class="button-previaLivro">Ver Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Uzumaki-Edi%C3%A7%C3%A3o-atual-Junji-Ito/dp/6555140577" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalUzumaki()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal Tomie -->
+    <div class="modal" id="popup-tomie" style="display: none;">
+        <div id="modalTomie">
+            <img src="../public/assets/tomie.jpg" alt="Mangá Tomie">
+
+            <p><b>Sinopse:</b>
+                Tomie desperta a paixão de todos os homens com quem se cruza. Cada capítulo apresenta uma nova história em que pessoas são atraídas por sua beleza, mas acabam consumidas por uma obsessão doentia, resultando em eventos trágicos.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.amazon.com.br/Tomie-1-2-Junji-Ito/dp/6586672376?asin=B08VNKNJNR&revisionId=8635c17e&format=3&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Tomie-1-2-Junji-Ito/dp/6586672376" target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalTomie()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal Os 13 porquês -->
+    <div class="modal" id="popup-trezePorques" style="display: none;">
+        <div id="modalTrezePorques">
+            <img src="../public/assets/Os 13 porquês.jpg" alt="Livro Os 13 porquês">
+
+            <p><b>Sinopse:</b>
+                Ao voltar da escola, Clay Jensen recebe um pacote com fitas cassetes narradas por uma colega, nas quais ela conta por que cometeu suicídio. Ele precisa ouvir tudo para descobrir como contribuiu para esse trágico acontecimento.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.youtube.com/watch?v=W3Om2us6JZ4"
+                    target="_blank">
+                    <button class="button-previaLivro">Ver Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Os-13-Porqu%C3%AAs-Jay-Asher/dp/8508126654/ref=sr_1_1?adgrpid=131821226532&dib=eyJ2IjoiMSJ9.6jTj5uSBSK7r9a2JHLgQj-wG-nVDV4Itm_qNAfPEn4Tr4V5MYsyitQKjvlRxTP9kXUTpR44PVGvooZANDB7EhuYW8-g10YzrljlPxaEIagPjQQ172yBpmZ5aMxgO0YqewXOQ3KsnGWtn1HuL9FKjcvHejd_gmsTNZFCKkIe8cxAb_bPZhHZAjbQSJek6-eGKHMygvbumWK3JdIzF3zInHxN3z5g6jd4bMZHcsJqWKXoTB-5eb-hCXvuMsRQN0fEnxNPFXi9O9xTNiGPdMCII7ORGm1x9ACwdZhxfhzCG8tM.YtZlF5biwm9kmHbcNsK3IE2M_m1xg6PDB59m76CjRKc&dib_tag=se&hvadid=595919572517&hvdev=c&hvlocphy=1001736&hvnetw=g&hvqmt=e&hvrand=6345540810878580092&hvtargid=kwd-321378062295&hydadcr=12797_13419333&keywords=os+13+porques+livro&qid=1716136761&sr=8-1"
+                target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalTrezePorques()">X</button>
+        </div>
+    </div>
+
+    <!-- Modal Coraline -->
+    <div class="modal" id="popup-coraline" style="display: none;">
+        <div id="modalCoraline">
+            <img src="../public/assets/CORALINE - NEIL GAIMAN _ RESENHA - Coisas de Mineira.jpg" alt="Livro Coraline">
+
+            <p><b>Sinopse:</b>
+                Uma garota corajosa que descobre uma porta secreta em sua nova casa. Do outro lado, encontra seus pais alternativos, mas algo parece errado. Essa versão sinistra da realidade a desafia a confrontar seus medos mais profundos para salvar sua família e a si mesma.
+            </p>
+
+            <div class="modalButtons">
+                <a href="https://www.amazon.com.br/Coraline-Acompanha-marcador-p%C3%A1ginas-especial/dp/8551006754/ref=sr_1_1?crid=IF6FPKPC6J8N&dib=eyJ2IjoiMSJ9.irGbrf4voDXA9XJsJrHXkVlrWGMV1EvzU1TM6U8-eDSIKiPy5kBCdHhkrL89wlAcB0NpUciF2jnRqnxqyvN5CtY2AtTI_ae178pgv4pTsQDPTkmayj9HeOH0AuBzMCN-MmOd9fm7WYON460prgvzJH-AxAyPzOQF1IZpxZ-ur4F4rjNF-E17Kyh2elOr2MK25R_xD3fXL5gCUPe8C6wB1ekHBSrhugihlQ2XRaC_DuI.t9o8mTSl6IlPOCeNa6iIlFO94IIXhxcNLinhznljB1k&dib_tag=se&keywords=coraline&qid=1716136958&s=books&sprefix=cora%2Cstripbooks%2C371&sr=1-1&asin=B088ZGDQLJ&revisionId=7ee5ecd2&format=1&depth=1"
+                    target="_blank">
+                    <button class="button-previaLivro">Ler Prévia</button>
+                </a>
+
+                <a href="https://www.amazon.com.br/Coraline-Acompanha-marcador-p%C3%A1ginas-especial/dp/8551006754/ref=sr_1_1?crid=IF6FPKPC6J8N&dib=eyJ2IjoiMSJ9.irGbrf4voDXA9XJsJrHXkVlrWGMV1EvzU1TM6U8-eDSIKiPy5kBCdHhkrL89wlAcB0NpUciF2jnRqnxqyvN5CtY2AtTI_ae178pgv4pTsQDPTkmayj9HeOH0AuBzMCN-MmOd9fm7WYON460prgvzJH-AxAyPzOQF1IZpxZ-ur4F4rjNF-E17Kyh2elOr2MK25R_xD3fXL5gCUPe8C6wB1ekHBSrhugihlQ2XRaC_DuI.t9o8mTSl6IlPOCeNa6iIlFO94IIXhxcNLinhznljB1k&dib_tag=se&keywords=coraline&qid=1716136958&s=books&sprefix=cora%2Cstripbooks%2C371&sr=1-1"
+                target="_blank">
+                    <button class="button-comprarLivro">Comprar</button>
+                </a>
+            </div>
+            <button class="button-exit" onclick="sairModalCoraline()">X</button>
+        </div>
+    </div>
+
+    <section class="containerLivrosGeneros">
+
+        <h1>Gênero Terror</h1>
+
+            <div class="livros">
+                <img src="../public/assets/Uzumaki integral Edition.jpg" alt="Mangá Uzumaki"
+                onclick="modalUzumaki()">
+                <img src="../public/assets/tomie.jpg" alt="Mangá Tomie" 
+                onclick="modalTomie()">
+                <img src="../public/assets/Os 13 porquês.jpg" alt="Livro Os 13 porquês"
+                onclick="modalTrezePorques()">
+                <img src="../public/assets/CORALINE - NEIL GAIMAN _ RESENHA - Coisas de Mineira.jpg" alt="Livro Coraline"
+                onclick="modalCoraline()">
+            </div>
+
+            <div class="prateleiraLivros">
+                <img src="../public/assets/Prateleira de madeira.png" alt="prateleira de madeira">
+            </div>
+    
+    </section>
+
+
+    
+</body>
+</html>

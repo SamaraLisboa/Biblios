@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/acesso.css">
+    <script src="./js/sessao.js"></script>
+    <title>Biblio's</title>
+</head>
+
+<body>
+
+    <div>
+        <div class="navbar-bemvindo">
+            <div class="logo-navbar">
+                <img src="./assets/logo bs fundo transparente.png" alt="logo Biblio's" width="100%" height="100%">
+            </div>
+
+            <div class="itens-navbar">
+                <a href="./index.html#bannerHome">Home</a>
+                <a href="./index.html#biblioteca">Biblioteca</a>
+                <a href="#quiz">Quiz</a>
+                <a href="./index.html#onu">ONU</a>
+                <a href="./index.html#sobreBiblios">Sobre a Biblio's</a>
+            </div>
+
+            <div class="buttons-navbar">
+                <a href="cadastro.html"><button class="button-cadastro">Cadastro</button></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="login">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+
+        <div class="containerLogin">
+
+            <div class="cardLogin">
+                <h2>Entrar</h2>
+
+                <label for="input_email">Email:</label>
+                <input type="text" id="input_email">
+
+                <label for="input_senha">Senha:</label>
+                <input type="text" id="input_senha">
+
+                <p>Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+
+                <button onclick="entrar()">Acessar Conta</button>
+            </div>
+
+        </div>
+
+</body>
+
+</html>
+
+<script>
+    function entrar() {
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Por favor, preencha todos os campos para prosseguir!";
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+                mensagem_erro.innerHTML = "Os dados inseridos estão incorretos, por favor, revise seus dados e tente novamente!";
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+</script>
