@@ -101,6 +101,42 @@ function finalizarQuiz() {
 
     <button onclick=window.location.reload() class="button">Refazer Teste</button>
     `
+    cadastrarRespostasQuiz();
+}
+
+function cadastrarRespostasQuiz() {
+    fetch("/quiz/cadastrarRespostasQuiz", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify({
+         qtdAcertosServer: totalRespostasCorretas,
+         qtdErrosServer: totalErros,
+       }),
+     })
+       .then(function (resposta) {
+         console.log("resposta: ", resposta);
+   
+         if (resposta.ok) {
+           cardErro.style.display = "block";
+   
+           mensagem_erro.innerHTML =
+             "Respostas cadastradas com sucesso!";
+   
+         } else {
+           throw "Houve um erro ao cadastrar as respostas!";
+         }
+       })
+       .catch(function (resposta) {
+         console.log(`#ERRO: ${resposta}`);
+       });
+   
+     return false;
+   
+   function sumirMensagem() {
+     cardErro.style.display = "none";
+   }
 }
 
 const perguntasQuiz = [
