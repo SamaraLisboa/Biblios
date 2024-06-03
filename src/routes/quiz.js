@@ -7,7 +7,7 @@ router.post("/cadastrarRespostasQuiz", function (req, res) {
     quizController.cadastrarRespostasQuiz(req, res);
 });
 
-router.get("/listarRespostasQuiz", function (req, res) {
+router.get("/exibirMediaAcertos", function (req, res) {
     quizController.listarRespostasQuiz(req, res);
 });
 

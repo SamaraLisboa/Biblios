@@ -45,10 +45,12 @@
             <button class="button-sair">Sair</button>
         </div>
 
-        <div class="graficos-verticais">
-            <canvas id="generosFavoritos"></canvas>
-            <canvas id="preferenciasTrilogias"></canvas>
-            <canvas id=""></canvas>
+        <div class="graficos-kpis">
+            <div class="cardKpis">
+                <p>Média de acertos dos usuários:</p>
+                <h1 id="mediaAcertos"></h1>
+            </div>
+            <div class="cardKpis"></div>
         </div>
     </section>
 
@@ -61,7 +63,85 @@
 
     let proximaAtualizacao;
 
-    const ctx = document.getElementById('generosFavoritos');
+    function entrar() {
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Por favor, preencha todos os campos para prosseguir!";
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+                mensagem_erro.innerHTML = "Os dados inseridos estão incorretos, por favor, revise seus dados e tente novamente!";
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

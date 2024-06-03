@@ -1,8 +1,7 @@
 var quizModel = require("../models/quizModel");
 
-function listarRespostasQuiz(req, res) {
-    quizModel.listarRespostasQuiz().then(function(resultado){
-        // precisamos informar que o resultado voltará para o front-end como uma resposta em json
+function exibirMediaAcertos(req, res) {
+    quizModel.exibirMediaAcertos().then(function(resultado){
         res.status(200).json(resultado);
     }).catch(function(erro){
         res.status(500).json(erro.sqlMessage);
@@ -17,7 +16,8 @@ function cadastrarRespostasQuiz(req, res) {
         res.status(400).send("Os erros e acertos estão undefided!");
     }
 
-    carroModel.cadastrarRespostasQuiz(qtdAcertos, qtdErros).then(function(resposta){
+    quizModel.cadastrarRespostasQuiz(qtdAcertos, qtdErros).then(function(resultado){
+
         res.status(200).send("Respostas cadastradas com sucesso!");
     }).catch(function(erro){
         res.status(500).json(erro.sqlMessage);
@@ -25,6 +25,6 @@ function cadastrarRespostasQuiz(req, res) {
 }
 
 module.exports = {
-    listarRespostasQuiz,
+    exibirMediaAcertos,
     cadastrarRespostasQuiz
 }

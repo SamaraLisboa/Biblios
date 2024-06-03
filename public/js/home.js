@@ -105,7 +105,7 @@ function finalizarQuiz() {
 }
 
 function cadastrarRespostasQuiz() {
-    fetch("/quiz/cadastrarRespostasQuiz", {
+    fetch("quiz/cadastrarRespostasQuiz", {
        method: "POST",
        headers: {
          "Content-Type": "application/json",

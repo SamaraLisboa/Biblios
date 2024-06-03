@@ -102,7 +102,8 @@ body {
     cursor: pointer;
 }
 
-.graficos-verticais {
-    width: 40%;
-    height: 100vh;
+.graficos-kpis {
+    width: 80%;
+    height: 40vh;
+    background-color: #5E371C;
 }

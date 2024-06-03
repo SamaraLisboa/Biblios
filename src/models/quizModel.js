@@ -1,8 +1,8 @@
 var database = require("../database/config")
 
-function listarRespostasQuiz() {
+function exibirMediaAcertos() {
     var instrucao = `
-        SELECT * FROM biblios;
+       select avg(qtdsAcertos) from quiz;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -10,7 +10,7 @@ function listarRespostasQuiz() {
 
 function cadastrarRespostasQuiz(qtdAcertos, qtdErros) {
     var instrucao = `
-        INSERT INTO bibios (qtdAcertos, qtdErros) VALUES ('${qtdAcertos}', '${qtdErros}');
+        INSERT INTO quiz (qtdAcertos, qtdErros) VALUES ('${qtdAcertos}', '${qtdErros}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -18,5 +18,5 @@ function cadastrarRespostasQuiz(qtdAcertos, qtdErros) {
 
 module.exports = {
     cadastrarRespostasQuiz,
-    listarRespostasQuiz
+    exibirMediaAcertos
 };
