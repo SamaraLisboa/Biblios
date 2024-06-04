@@ -2,15 +2,27 @@ var database = require("../database/config")
 
 function exibirMediaAcertos() {
     var instrucao = `
-       select avg(qtdsAcertos) from quiz;
+    select round(avg(qtdAcertos), 0) as mediaAcertos from quiz;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
-function cadastrarRespostasQuiz(qtdAcertos, qtdErros) {
+function exibirPontuacao() {
     var instrucao = `
-        INSERT INTO quiz (qtdAcertos, qtdErros) VALUES ('${qtdAcertos}', '${qtdErros}');
+    select qtdAcertos as pontuacao 
+    from quiz 
+    where fkUsuario = 1 
+    order by fkUsuario desc limit 1;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrarRespostasQuiz(idUsuario, qtdAcertos, qtdErros) {
+    var instrucao = `
+        INSERT INTO quiz (fkUsuario, qtdAcertos, qtdErros) VALUES ('${idUsuario}', '${qtdAcertos}', 
+        '${qtdErros}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -18,5 +30,6 @@ function cadastrarRespostasQuiz(qtdAcertos, qtdErros) {
 
 module.exports = {
     cadastrarRespostasQuiz,
-    exibirMediaAcertos
+    exibirMediaAcertos,
+    exibirPontuacao,
 };

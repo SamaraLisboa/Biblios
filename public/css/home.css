@@ -261,102 +261,14 @@
 }
 
 /* Section 4 - Quiz */
-.sectionQuiz {
+.realizarQuiz {
     width: 100%;
     height: 100vh;
-    background-image: url(../assets/coracao\ de\ livros.jfif);
-    box-sizing: border-box;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--whiteBS);
 }
 
-.sectionQuiz button {
-    cursor: pointer;
-    background-color: var(--brownSoftBS);
-    color: var(--whiteBS);
-    font-size: 16px;
-    font-weight: bold;
-    border: 0;
-    border-radius: 6px;
-    height: 48px;
-    padding: 0 32px;
-    transition: filter;
-}
 
-.sectionQuiz button:not(:disabled):hover {
-    filter: brightness(0.8);
-}
 
-.container-quiz {
-    background-color: var(--brownDarkBS);
-    width: 90%;
-    max-width: 800px;
-    border: 2px solid #5E371C;
-    border-radius: 6px;
-    padding: 16px;
-    box-shadow: 0 0 2px 2px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-questoes {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-.perguntas {
-    color: var(--whiteBS);
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.questoesQuiz {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.proxima-pergunta {
-    margin-top: 32px;
-}
-
-.hide {
-    display: none;
-}
-
-.questoesQuiz button.fundoRespostaCorreta {
-    background-color: green;
-}
-
-.questoesQuiz button.fundoRespostaIncorreta {
-    background-color: red;
-}
-
-.questoesQuiz button:disabled {
-    cursor: not-allowed;
-}
-
-.quiz-mensagemFinal {
-    font-size: 20px;
-    text-align: center;
-    color: var(--whiteBS);
-}
-
-.quiz-mensagemFinal span {
-    display: block;
-    margin-top: 8px;
-}
 
 /* Section 5 - ONU */
 .containerONU {
@@ -440,3 +352,4 @@
     color: var(--whiteBS);
     font-size: large;
 }
+

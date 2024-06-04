@@ -2,7 +2,9 @@ const comecarQuizButton = document.querySelector(".comecar-quiz");
 const cardQuestoes = document.querySelector(".card-questoes");
 const questoesButtons = document.querySelector(".questoesQuiz");
 const perguntaTitulo = document.querySelector(".perguntas");
-const proximaPerguntaButton = document.querySelector(".proxima-pergunta")
+const proximaPerguntaButton = document.querySelector(".proxima-pergunta");
+
+const idUsuario = sessionStorage.ID_USUARIO;
 
 comecarQuizButton.addEventListener("click", comecarQuiz);
 proximaPerguntaButton.addEventListener("click", proximaPergunta);
@@ -95,17 +97,16 @@ function finalizarQuiz() {
     cardQuestoes.innerHTML = 
     `
     <p class="quiz-mensagemFinal">
-    Você acertou ${totalRespostasCorretas} de ${totalQuestoes} questões!
-    <span>Resultado: ${mensagem}</span>
+    <span>${mensagem}</span>
     </p>
 
-    <button onclick=window.location.reload() class="button">Refazer Teste</button>
+    <a href="./dashboard.html"><button class="button">Ver re</button></a>
     `
     cadastrarRespostasQuiz();
 }
 
 function cadastrarRespostasQuiz() {
-    fetch("quiz/cadastrarRespostasQuiz", {
+    fetch(`/quiz/cadastrarRespostasQuiz/${idUsuario}`, {
        method: "POST",
        headers: {
          "Content-Type": "application/json",
