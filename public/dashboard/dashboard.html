@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="./../css/estilo.css" /> -->
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
-    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -28,7 +28,7 @@
 
 <!-- <body onload=" atualizarFeed()"> -->
 
-<body onload="exibirPontuacao(),exibirMediaAcertos()">
+<body onload="exibirPontuacao(),exibirMediaAcertos(),ultimasRespostas()">
     <section class="section-dashboard">
         <div class="menuLateral">
             <h1>Biblio´s</h1>
@@ -45,16 +45,41 @@
             <button class="button-sair">Sair</button>
         </div>
 
-        <div class="graficos-kpis">
-            <div class="cardKpis">
-                <p>Média de acertos dos usuários:</p>
-                <h1 id="kpiMediaAcertos"></h1>
+        <div class="container-graficos">
+
+            <div class="direcao-kpis">
+
+                <div class="cardKpis">
+                    <p>Média de acertos dos usuários:</p>
+
+                    <div class="pontuacao">
+                        <h1 id="kpiMediaAcertos"></h1>
+                        <h1>/10</h1>
+                    </div>
+                </div>
+
+                <div class="cardKpis">
+                    <p>Sua pontuação:</p>
+
+                    <div class="pontuacao">
+                        <h1 id="kpiPontuacao"></h1>
+                        <h1>/10</h1>
+                    </div>
+                </div>
             </div>
-            <div class="cardKpis">
-                <p>Sua pontuação:</p>
-                <h1 id="kpiPontuacao"></h1>
+
+            <div class="graficos">
+                <div class="container-usuariosacertos">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                <div class="container-usuariosacertos">
+                    <canvas id="myChart2"></canvas>
+                </div>
             </div>
+
         </div>
+
     </section>
 
 </body>
@@ -63,8 +88,6 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-    let proximaAtualizacao;
 
     function mediaAcertos(resposta) {
 
@@ -160,5 +183,80 @@
 
         return false;
     }
+
+    const nomes = [];
+    const acertos = [];
+    const listaCores = ['#CD853F', '#5E371C', ' #271E17'];
+
+    function ultimasRespostas() {
+        fetch('/dashboard/ultimasRespostas', { method: 'POST' })
+            .then(resultado => resultado.json())
+            .then(respostas => {
+
+                console.log(respostas)
+
+                respostas.forEach(resposta => {
+
+
+                    nomes.push(resposta.nome);
+                    acertos.push(resposta.qtdAcertos);
+
+
+                });
+
+                let posicaoCor = Math.random() * 3;
+                let corGrafico = listaCores[posicaoCor];
+
+                console.log(acertos)
+                console.log(nomes)
+
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: nomes,
+                        datasets: [{
+                            label: "Quantidade de Acertos",
+                            data: acertos,
+                            borderWidth: 1,
+                            backgroundColor: ['#FFE4C4', '#B0E0E6', '#FFFACD'],
+                            borderColor: corGrafico
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                const ctx2 = document.getElementById('myChart2');
+                new Chart(ctx2, {
+                    type: 'pie',
+                    data: {
+                        labels: nomes,
+                        datasets: [{
+                            label: "Quantidade de Acertos",
+                            data: acertos,
+
+                            backgroundColor: ['#FF0000', '#1E90FF', '#FFFF00'],
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Erro ao buscar pontuações:', error));
+    }
+
+
 
 </script>
