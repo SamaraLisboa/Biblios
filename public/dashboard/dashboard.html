@@ -9,10 +9,8 @@
 
 
     <link rel="stylesheet" href="./../css/dashboard.css">
-    <!-- <link rel="stylesheet" href="./../css/estilo.css" /> -->
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
-    <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -26,8 +24,6 @@
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- <body onload=" atualizarFeed()"> -->
-
 <body onload="exibirPontuacao(),exibirMediaAcertos(),ultimasRespostas()">
     <section class="section-dashboard">
         <div class="menuLateral">
@@ -37,12 +33,7 @@
                 <h3>Olá, <span id="b_usuario"></span>!</h3>
             </div>
 
-            <div class="buttons-dash">
-                <button class="button-simulacaoLeitura">Simulação de Leitura Anual</button>
-                <button class="button-dadosLivros">Dados de Livros</button>
-            </div>
-
-            <button class="button-sair">Sair</button>
+            <a href="../index.html"><button class="button-sair">Sair</button></a>
         </div>
 
         <div class="container-graficos">
@@ -69,11 +60,11 @@
             </div>
 
             <div class="graficos">
-                <div class="container-usuariosacertos">
-                    <canvas id="myChart"></canvas>
+                <div>
+                    <canvas id="myChart" width="550px"></canvas>
                 </div>
 
-                <div class="container-usuariosacertos">
+                <div>
                     <canvas id="myChart2"></canvas>
                 </div>
             </div>
@@ -220,7 +211,7 @@
                             label: "Quantidade de Acertos",
                             data: acertos,
                             borderWidth: 1,
-                            backgroundColor: ['#FFE4C4', '#B0E0E6', '#FFFACD'],
+                            backgroundColor: ['#D2691E', '#5E371C', '#271E17'],
                             borderColor: corGrafico
                         }]
                     },
@@ -239,10 +230,8 @@
                     data: {
                         labels: nomes,
                         datasets: [{
-                            label: "Quantidade de Acertos",
                             data: acertos,
-
-                            backgroundColor: ['#FF0000', '#1E90FF', '#FFFF00'],
+                            backgroundColor: ['#DEB887', '#e2e384', '#5e4725'],
                         }]
                     },
                     options: {
@@ -256,7 +245,5 @@
             })
             .catch(error => console.error('Erro ao buscar pontuações:', error));
     }
-
-
 
 </script>

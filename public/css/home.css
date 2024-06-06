@@ -261,14 +261,15 @@
 }
 
 /* Section 4 - Quiz */
-.realizarQuiz {
+.muralFotos {
     width: 100%;
     height: 100vh;
     background-color: var(--whiteBS);
 }
 
-
-
+.muralFoto img {
+    border-radius: 10px;
+}
 
 /* Section 5 - ONU */
 .containerONU {
@@ -351,5 +352,13 @@
     align-items: center;
     color: var(--whiteBS);
     font-size: large;
+}
+
+#fotoSobre img {
+    height: 50vh;
+    width: 100%;
+
+    object-fit: cover;
+    border-radius: 400px;
 }
 

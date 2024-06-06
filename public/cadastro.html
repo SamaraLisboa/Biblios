@@ -28,7 +28,7 @@
       <a href="login.html"><button class="button-login">Login</button></a>
     </div>
   </div>
-
+  
   </div>
 
   <div class="alerta_erro">
@@ -44,22 +44,22 @@
 
       <div class="inputsCadastro">
         <label for="input_nome_usuario">Nome de usuário:</label>
-        <input type="text" id="input_nome_usuario">
+        <input type="text" id="input_nome_usuario" placeholder="usuario">
       </div>
 
       <div class="inputsCadastro">
         <label for="input_email">Email:</label>
-        <input type="text" id="input_email">
+        <input type="text" id="input_email" placeholder="seuemail@provedor.com">
       </div>
 
       <div class="inputsCadastro">
         <label for="input_senha">Senha:</label>
-        <input type="text" id="input_senha">
+        <input type="text" id="input_senha" placeholder="****">
       </div>
 
       <div class="inputsCadastro">
         <label for="input_confirmacao_senha">Confirmação da senha:</label>
-        <input type="text" id="input_confirmacao_senha">
+        <input type="text" id="input_confirmacao_senha" placeholder="****">
       </div>
 
       <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
@@ -71,27 +71,116 @@
 
 </html>
 
-
 <script>
   function cadastrar() {
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = input_nome_usuario.value;
-    var emailVar = input_email.value;
-    var senhaVar = input_senha.value;
-    var confirmacaoSenhaVar = input_confirmacao_senha.value;
-    //   var empresaVar = listaEmpresas.value
-    if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == ""
-      // empresaVar == ""
+    let nomeVar = input_nome_usuario.value;
+    let emailVar = input_email.value;
+    let senhaVar = input_senha.value;
+    let confirmacaoSenhaVar = input_confirmacao_senha.value;
+
+    let procurarNumeroSenha = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let procurarCaracteresSenha = ["@", "#"];
+    let naoAcheiNumeroSenha = true;
+    let naoAcheiCaracteresSenha = true;
+
+    for (let percorrerSenha = 0;
+      percorrerSenha <= procurarNumeroSenha.length;
+      percorrerSenha++
     ) {
+
+      if (senhaVar.indexOf(procurarNumeroSenha[percorrerSenha]) > -1) {
+        naoAcheiNumeroSenha = false;
+        break;
+      }
+
+    }
+
+    for (let percorrerSenha = 0;
+      percorrerSenha <= procurarCaracteresSenha.length;
+      percorrerSenha++
+    ) {
+
+      if (senhaVar.indexOf(procurarCaracteresSenha[percorrerSenha]) > -1) {
+        naoAcheiCaracteresSenha = false;
+        break;
+      }
+
+    }
+
+    if (
+      nomeVar == false &
+      emailVar == false &
+      senhaVar == false &
+      confirmacaoSenhaVar == false
+    ) {
+
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
         "Por favor, preencha todos os campos para prosseguir!";
+
+      return false;
+    } else if (nomeVar == false) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Preencha o nome para prosseguir!";
+
+      return false;
+    } else if (emailVar == false) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Preencha o email para prosseguir!";
+
+      return false;
+    } else if (!emailVar.indexOf("@") || emailVar.indexOf("@") == emailVar.length - 1) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "O email deve conter @ e provedor!";
+
+      return false;
+    } else if (senhaVar == false) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Preencha a senha para prosseguir!";
+
+      return false;
+    } else if (confirmacaoSenhaVar == false) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Preencha a confirmação de senha para prosseguir!";
+
+      return false;
+    } else if (senhaVar.length < 8) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha deve conter ao menos 8 caracteres!";
+
+      return false;
+    } else if (naoAcheiNumeroSenha) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha deve conter ao menos um número!";
+
+      return false;
+    } else if (naoAcheiCaracteresSenha) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha deve conter ao menos um caractere especial!";
+
+      return false;
+    } else if (senhaVar != confirmacaoSenhaVar) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha e confirmação de senha não conferem!";
 
       return false;
     } else {
@@ -107,9 +196,9 @@
       body: JSON.stringify({
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar
+        nomeServer: nomeVar.trim(),
+        emailServer: emailVar.trim(),
+        senhaServer: senhaVar.trim()
       }),
     })
       .then(function (resposta) {

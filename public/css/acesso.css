@@ -95,7 +95,7 @@ h2 {
 
 a {
     text-decoration-color: #CD853F;
-    color: 	#CD853F;
+    color: #CD853F;
 }
 
 .card_erro {
@@ -114,6 +114,12 @@ a {
     font-weight: 500;
     font-size: 20px;
 }
+
+.alerta_erro {
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 
 /* Cadastro */
@@ -190,12 +196,6 @@ a {
     border-radius: 5%;
     cursor: pointer;
 }
-
-.alerta_erro {
-    display: flex;
-    justify-content: flex-end;
-}
-
 
 /* Login */
 .containerLogin {
