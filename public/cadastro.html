@@ -217,6 +217,9 @@
           limparFormulario();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
+
+          mensagem_erro.innerHTML =
+            "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {

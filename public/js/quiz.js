@@ -100,7 +100,7 @@ function finalizarQuiz() {
     <span>${mensagem}</span>
     </p>
 
-    <a href="./dashboard.html"><button class="button">Ver re</button></a>
+    <a href="./dashboard.html"><button class="button">Ver resultado</button></a>
     `
     cadastrarRespostasQuiz();
 }
@@ -223,12 +223,12 @@ const perguntasQuiz = [
         ]
     },
     {
-        question: 'Qual é o título do livro de Maquiavel que discute estratégias políticas?',
+        question: 'Qual é o título do livro de Maquiável que discute estratégias políticas?',
         answers: [
             { text: 'A Arte da Guerra', correct: false },
             { text: 'Leviatã', correct: false },
             { text: 'O Príncipe', correct: true },
-            { text: ' O Processo', correct: false },
+            { text: 'O Processo', correct: false },
         ]
     },
 ]
