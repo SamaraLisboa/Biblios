@@ -12,7 +12,7 @@ function exibirPontuacao() {
     var instrucao = `
     select qtdAcertos as pontuacao 
     from quiz 
-    where fkUsuario = 1 
+    where fkUsuario
     order by fkUsuario desc limit 1;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);

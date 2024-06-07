@@ -26,7 +26,8 @@ function cadastrarRespostasQuiz(req, res) {
 }
 
 function exibirPontuacao(req, res) {
-    quizModel.exibirPontuacao().then(function(resultado){
+    var idUsuario= req.params.idUsuario;
+    quizModel.exibirPontuacao(idUsuario).then(function(resultado){
         res.status(200).json(resultado);
     }).catch(function(erro){
         res.status(500).json(erro.sqlMessage);

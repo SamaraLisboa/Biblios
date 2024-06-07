@@ -78,6 +78,7 @@
 </html>
 
 <script>
+    var idUsuario = sessionStorage.ID_USUARIO;
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function mediaAcertos(resposta) {
@@ -148,7 +149,7 @@
     }
 
     function exibirPontuacao() {
-        fetch("/quiz/exibirPontuacao", {
+        fetch(`/quiz/exibirPontuacao`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -165,7 +166,7 @@
 
             } else {
 
-                console.log("Houve um erro ao tentar realizar o login!");
+                console.log("Houve um erro ao tentar exibir a pontuação!");
             }
 
         }).catch(function (erro) {
